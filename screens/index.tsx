@@ -1,4 +1,4 @@
-import Welcome from './Welcome'
-import Main from './Main'
+import Welcome from './Welcome';
+import Main from './Main';
 
-export { Welcome, Main }
+export {Welcome, Main};

@@ -4,13 +4,12 @@ import Button from '../components/welcomebutton.js';
 
 const Welcome = ({navigation}: {navigation: any}) => {
   return (
-    //just a black screen with white text
     <View
       style={{
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FFFFF0',
+        backgroundColor: '#FFFFFF',
       }}>
       <Image
         source={require('../assets/logos/shrunk.png')}
