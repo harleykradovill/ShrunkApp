@@ -1,4 +1,4 @@
-import {View, Text, Image,} from 'react-native';
+import {View, Image} from 'react-native';
 import React from 'react';
 import Button from '../components/welcomebutton.js';
 
@@ -17,28 +17,9 @@ const Welcome = ({navigation}: {navigation: any}) => {
           width: '60%',
           height: '60%',
           resizeMode: 'contain',
-          marginBottom: 150,
+          marginBottom: 140,
         }}
       />
-
-      <Text
-        style={{
-          color: 'black',
-          fontSize: 28,
-          fontWeight: 'bold',
-        }}>
-        Welcome to Shrunk
-      </Text>
-
-      <Text
-        style={{
-          color: 'black',
-          fontSize: 18,
-          textAlign: 'center',
-          marginHorizontal: 20,
-        }}>
-        Be aware of shrinkflation
-      </Text>
 
       <View
         style={{
@@ -49,7 +30,7 @@ const Welcome = ({navigation}: {navigation: any}) => {
         }}>
         <Button
           title="Get Started"
-          onPress={() => navigation.navigate('Main')}
+          onPress={() => navigation.navigate('TabNavigator', {screen: 'Scan'})}
           style={{
             marginBottom: 20,
             paddingVertical: 12,
