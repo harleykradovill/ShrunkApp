@@ -7,7 +7,7 @@ import COLORS from './constants/colors';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-
+import { AntDesign } from '@expo/vector-icons';
 
 // Bottom Tab Navigation
 const TabNavigator = () => {
@@ -18,7 +18,13 @@ const TabNavigator = () => {
         headerShown:true,
         headerTransparent:true,
       }}>
-      <Tab.Screen name="Scan" component={Scan} />
+      <Tab.Screen name="Scan" component={Scan}
+        options={{
+          tabBarIcon: ({ focused, color, size }) => (
+            <AntDesign name="home" size={size} color={focused ? COLORS.blue : color} />
+          ),
+        }}
+      />
       <Tab.Screen name="History" component={History} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
