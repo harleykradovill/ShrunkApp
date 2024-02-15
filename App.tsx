@@ -3,16 +3,20 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Welcome, Scan, History, Settings} from './screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import COLORS from "./constants/colors";
+import COLORS from './constants/colors';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
+
+// Bottom Tab Navigation
 const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: COLORS.blue,
+        headerShown:true,
+        headerTransparent:true,
       }}>
       <Tab.Screen name="Scan" component={Scan} />
       <Tab.Screen name="History" component={History} />
@@ -21,6 +25,8 @@ const TabNavigator = () => {
   );
 };
 
+
+//Start app in Welcome screen
 export default function App() {
   return (
     <NavigationContainer>

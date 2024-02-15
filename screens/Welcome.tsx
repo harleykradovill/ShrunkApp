@@ -17,7 +17,6 @@ const Welcome = ({navigation}: {navigation: any}) => {
           width: '60%',
           height: '60%',
           resizeMode: 'contain',
-          marginBottom: 140,
         }}
       />
 
