@@ -1,11 +1,11 @@
 {
-  "name": "ShrunkApp",
-  "displayName": "ShrunkApp",
+  "name": "Shrunk",
+  "displayName": "Shrunk",
   "expo": {
     "extra": {
       "eas": {
         "projectId": "f621631e-a810-4fd8-8b61-24240ee15e8d"
       }
-    }
+    },
   }
 }
