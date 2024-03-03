@@ -7,14 +7,14 @@ import COLORS from './constants/colors';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-import { AntDesign } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 // Bottom Tab Navigation
 const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: COLORS.blue,
+        tabBarActiveTintColor: COLORS.shrunkgreen,
         headerShown:true,
         headerTransparent:true,
       }}>

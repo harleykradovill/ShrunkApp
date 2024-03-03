@@ -3,8 +3,8 @@ import React from 'react'
 import COLORS from '../constants/colors'
 
 const Button = (props) => {
-    const filledBgColor = props.color || COLORS.blue;
-    const outlinedColor = COLORS.blue;
+    const filledBgColor = props.color || COLORS.shrunkgreen;
+    const outlinedColor = COLORS.shrunkgreen;
     const bgColor = props.filled ? filledBgColor : outlinedColor;
     const textColor = props.filled ? COLORS.white : COLORS.white;
 

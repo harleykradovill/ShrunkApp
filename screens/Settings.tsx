@@ -21,7 +21,7 @@ const Settings = () => {
           width: '90%',
         }}>
         <Text style = {{
-          color: COLORS.blue,
+          color: COLORS.shrunkgreen,
         }}>
           Application Settings
         </Text>
@@ -37,7 +37,7 @@ const Settings = () => {
         />
 
         <Text style = {{
-          color: COLORS.blue,
+          color: COLORS.shrunkgreen,
         }}>
           About Shrunk
         </Text>
