@@ -6,5 +6,6 @@ const COLORS = {
     success: '#00C853',
     blue: '#006cda',
     shrunkgreen: '#08a045',
+    tabbarbackground: '#f3f2f0',
     };
 export default COLORS;
