@@ -15,23 +15,27 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         tabBarActiveTintColor: COLORS.shrunkgreen,
+        tabBarInactiveTintColor: COLORS.black,
         headerShown:true,
         headerTransparent:true,
         headerTintColor: COLORS.black,
         tabBarActiveBackgroundColor: COLORS.tabbarbackground,
         tabBarInactiveBackgroundColor: COLORS.tabbarbackground,
         tabBarLabelStyle: {
-          fontSize: 11,
+          fontSize: 12,
           marginBottom: 5,
+          fontFamily: 'Poppins-Regular',
         },
         tabBarStyle: {
-          height: 55,
-          borderTopLeftRadius: 20,
-          borderTopRightRadius: 20,
+          height: 60,
+          borderColor: COLORS.tabbarborder,
         },
       }}>
       <Tab.Screen name="Scan" component={Scan} options={{
         headerShown: false,
+        tabBarIcon: ({ color, size }) => (
+          <Ionicons name="scan" color={color} size={size} />
+        ),
       }}/>
       <Tab.Screen name="History" component={History} />
       <Tab.Screen name="Settings" component={Settings} />
