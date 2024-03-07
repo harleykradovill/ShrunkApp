@@ -13,7 +13,26 @@ import { Ionicons } from '@expo/vector-icons';
 const TabNavigator = () => {
   return (
     <Tab.Navigator
-      screenOptions={{
+      screenOptions={({route}) => ({
+        //handle icons
+        tabBarIcon: ({focused, color, size}) => {
+          let iconName;
+          if (focused) {
+            color = COLORS.shrunkgreen;
+          } else {
+            color = COLORS.black;
+          }
+          size = 30;
+          if (route.name === 'Scan') {
+            iconName = focused ? 'scan' : 'scan';
+          } else if (route.name === 'History') {
+            iconName = focused ? 'time' : 'time';
+          } else if (route.name === 'Settings') {
+            iconName = focused ? 'settings' : 'settings';
+          }
+          return <Ionicons name={iconName as any} size={size} color={color} />;
+        },
+
         tabBarActiveTintColor: COLORS.shrunkgreen,
         tabBarInactiveTintColor: COLORS.black,
         headerShown:true,
@@ -30,13 +49,10 @@ const TabNavigator = () => {
           height: 60,
           borderColor: COLORS.tabbarborder,
         },
-      }}>
+      })}>
       <Tab.Screen name="Scan" component={Scan} options={{
         headerShown: false,
-        tabBarIcon: ({ color, size }) => (
-          <Ionicons name="scan" color={color} size={size} />
-        ),
-      }}/>
+      }}/>n
       <Tab.Screen name="History" component={History} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
