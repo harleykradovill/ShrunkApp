@@ -2,7 +2,7 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import COLORS from '../constants/colors';
 import Button from '../components/settingsbutton';
-import Button2 from '../components/settingsbutton2';
+import Button2 from '../components/settingspagebutton';
 
 const Settings = () => {
   return (
@@ -20,33 +20,20 @@ const Settings = () => {
           alignItems: 'stretch',
           width: '90%',
         }}>
-        <Text style = {{
-          color: COLORS.shrunkgreen,
-        }}>
-          Application Settings
-        </Text>
 
-        <Button
-          title="Language"
-          subtitle="English (US)"
+        <Button2
+          title="Application Settings"
           style={{
-            marginBottom: 10,
+            marginBottom: 5,
             paddingVertical: 12,
             paddingHorizontal: 25,
           }}
         />
 
-        <Text style = {{
-          color: COLORS.shrunkgreen,
-        }}>
-          About Shrunk
-        </Text>
-
-        <Button
-          title="App Version"
-          subtitle="0.0.1"
+        <Button2
+          title="About Shrunk"
           style={{
-            marginBottom: 10,
+            marginBottom: 5,
             paddingVertical: 12,
             paddingHorizontal: 25,
           }}
@@ -69,6 +56,16 @@ const Settings = () => {
             paddingHorizontal: 25,
           }}
         />
+
+        <Button2
+          title="Delete App Data"
+          style={{
+            marginBottom: 5,
+            paddingVertical: 12,
+            paddingHorizontal: 25,
+          }}
+        />
+
       </View>
 
       <View style = {{
@@ -80,6 +77,8 @@ const Settings = () => {
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
+          fontFamily: 'Poppins-Regular',
+          marginBottom: -3,
         }}>
           Created by Harley Kradovill
         </Text>
@@ -88,6 +87,8 @@ const Settings = () => {
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
+          fontFamily: 'Poppins-Regular',
+          marginBottom: -3,
         }}>
           Using Native React
         </Text>

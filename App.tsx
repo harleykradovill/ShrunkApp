@@ -52,7 +52,7 @@ const TabNavigator = () => {
       })}>
       <Tab.Screen name="Scan" component={Scan} options={{
         headerShown: false,
-      }}/>n
+      }}/>
       <Tab.Screen name="History" component={History} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>

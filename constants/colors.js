@@ -8,5 +8,6 @@ const COLORS = {
     shrunkgreen: '#08a045',
     tabbarbackground: '#f3f2f0',
     tabbarborder: '#8d8d8d',
+    cgray: '#cccccc',
     };
 export default COLORS;

@@ -12,15 +12,18 @@ const Button = (props) => {
             ...styles.button,
             ...props.style,
             paddingLeft: 0,
+            paddingRight: 0,
         }}
         onPress={props.onPress}
       >
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-              <View>
-                  <Text style={{ fontSize: 14, textAlign: 'left', color: '#999' }}>{props.title}</Text>
-                  <Text style={{ fontSize: 18, textAlign: 'left', color: COLORS.black }}>{props.subtitle}</Text>
-              </View>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+          <View>
+            <Text style={{ fontSize: 16, textAlign: 'left', color: COLORS.black, fontFamily: 'Poppins-Regular' }}>{props.title}</Text>
           </View>
+          <View>
+            <Text style={{ fontSize: 16, textAlign: 'right', color: COLORS.shrunkgreen, fontFamily: 'Poppins-Regular' }}>{props.subtitle}</Text>
+          </View>
+        </View>
       </TouchableOpacity>
     );
 };
