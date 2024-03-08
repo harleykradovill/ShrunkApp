@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {Welcome, Scan, History, Settings} from './screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import COLORS from './constants/colors';
+import {View} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -13,26 +14,7 @@ import { Ionicons } from '@expo/vector-icons';
 const TabNavigator = () => {
   return (
     <Tab.Navigator
-      screenOptions={({route}) => ({
-        //handle icons
-        tabBarIcon: ({focused, color, size}) => {
-          let iconName;
-          if (focused) {
-            color = COLORS.shrunkgreen;
-          } else {
-            color = COLORS.black;
-          }
-          size = 30;
-          if (route.name === 'Scan') {
-            iconName = focused ? 'scan' : 'scan';
-          } else if (route.name === 'History') {
-            iconName = focused ? 'time' : 'time';
-          } else if (route.name === 'Settings') {
-            iconName = focused ? 'settings' : 'settings';
-          }
-          return <Ionicons name={iconName as any} size={size} color={color} />;
-        },
-
+      screenOptions={() => ({
         tabBarActiveTintColor: COLORS.shrunkgreen,
         tabBarInactiveTintColor: COLORS.black,
         headerShown:false,
@@ -53,6 +35,14 @@ const TabNavigator = () => {
       <Tab.Screen name="History" component={History} />
       <Tab.Screen name="Scan" component={Scan} options={{
         headerShown: false,
+        tabBarIcon: () => {
+          return (
+            <View style={{alignItems: "center", justifyContent: "center"}}>
+              <Ionicons name="scan" size={24} color="#B00020" />
+            </View>
+
+          )
+        }
       }}/>
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>

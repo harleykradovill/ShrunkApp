@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import COLORS from '../constants/colors';
-//import Icon from 'react-native-vector-icons/Ionicons';
+import { Entypo } from '@expo/vector-icons';
 
 const History = () => {
   return (
@@ -28,6 +28,9 @@ const History = () => {
         }}>
           History
         </Text>
+
+        <Entypo name="cog" size={24} color="#B00020" />
+
       </View>
 
     </View>

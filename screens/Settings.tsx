@@ -1,7 +1,6 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import COLORS from '../constants/colors';
-import Button from '../components/settingsbutton';
 import Button2 from '../components/settingspagebutton';
 
 const Settings = () => {
