@@ -1,6 +1,7 @@
 import {View, Image} from 'react-native';
 import React from 'react';
 import Button from '../components/welcomebutton.js';
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Welcome = ({navigation}: {navigation: any}) => {
   return (

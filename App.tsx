@@ -28,7 +28,7 @@ const TabNavigator = () => {
           fontFamily: 'Poppins-Regular',
         },
         tabBarStyle: {
-          height: 60,
+          height: '8%',
         },
         tabBarIcon: ({ focused }) => {
           let iconName = "";
@@ -40,8 +40,6 @@ const TabNavigator = () => {
           } else if (route.name === 'Settings') {
             iconName = focused ? 'settings' : 'settings-outline';
           }
-
-          // You can return any component that you like here!
           return <Icon name={iconName} size={24} color={focused ? COLORS.shrunkgreen : COLORS.black} />;
         },
       })}>
@@ -62,7 +60,7 @@ const TabNavigator = () => {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TabNavigator">
+      <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen
           name="Welcome"
           component={Welcome}
