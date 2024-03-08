@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import COLORS from '../constants/colors';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const History = () => {
   return (
@@ -29,8 +29,9 @@ const History = () => {
           History
         </Text>
 
-      </View>
+        <Icon name="scan" size={30} color='#555555' />
 
+      </View>
     </View>
   );
 };

@@ -8,7 +8,7 @@ import {View} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 // Bottom Tab Navigation
 const TabNavigator = () => {
@@ -38,7 +38,7 @@ const TabNavigator = () => {
         tabBarIcon: () => {
           return (
             <View style={{alignItems: "center", justifyContent: "center"}}>
-              <Ionicons name="scan" size={24} color="#B00020" />
+              <Icon name="scan" size={24} color={COLORS.black} />
             </View>
 
           )
