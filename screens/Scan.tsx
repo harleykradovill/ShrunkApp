@@ -9,7 +9,7 @@ const Scan = () => {
      flex: 1,
      justifyContent: 'center',
      alignItems: 'center',
-     backgroundColor: COLORS.white,
+     backgroundColor: COLORS.black,
    }} />
   );
 };

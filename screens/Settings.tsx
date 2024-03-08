@@ -16,10 +16,20 @@ const Settings = () => {
         style={{
           flex: 1,
           justifyContent: 'flex-start',
-          marginTop: 70,
+          marginTop: 20,
           alignItems: 'stretch',
           width: '90%',
         }}>
+
+        <Text style={{
+          fontSize: 20,
+          textAlign: 'left',
+          color: COLORS.shrunkgreen,
+          fontFamily: 'Poppins-Bold',
+          marginBottom: 10,
+        }}>
+          Settings
+        </Text>
 
         <Button2
           title="Application Settings"

@@ -35,11 +35,11 @@ const TabNavigator = () => {
 
         tabBarActiveTintColor: COLORS.shrunkgreen,
         tabBarInactiveTintColor: COLORS.black,
-        headerShown:true,
+        headerShown:false,
         headerTransparent:true,
         headerTintColor: COLORS.black,
-        tabBarActiveBackgroundColor: COLORS.tabbarbackground,
-        tabBarInactiveBackgroundColor: COLORS.tabbarbackground,
+        tabBarActiveBackgroundColor: COLORS.white,
+        tabBarInactiveBackgroundColor: COLORS.white,
         tabBarLabelStyle: {
           fontSize: 12,
           marginBottom: 5,
@@ -47,13 +47,13 @@ const TabNavigator = () => {
         },
         tabBarStyle: {
           height: 60,
-          borderColor: COLORS.tabbarborder,
         },
       })}>
+
+      <Tab.Screen name="History" component={History} />
       <Tab.Screen name="Scan" component={Scan} options={{
         headerShown: false,
       }}/>
-      <Tab.Screen name="History" component={History} />
       <Tab.Screen name="Settings" component={Settings} />
     </Tab.Navigator>
   );
@@ -64,7 +64,7 @@ const TabNavigator = () => {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome">
+      <Stack.Navigator initialRouteName="TabNavigator">
         <Stack.Screen
           name="Welcome"
           component={Welcome}
