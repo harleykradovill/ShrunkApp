@@ -4,7 +4,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {Welcome, Scan, History, Settings} from './screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import COLORS from './constants/colors';
-import {View} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -14,7 +13,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const TabNavigator = () => {
   return (
     <Tab.Navigator
-      screenOptions={() => ({
+      screenOptions={({ route }) => ({
         tabBarActiveTintColor: COLORS.shrunkgreen,
         tabBarInactiveTintColor: COLORS.black,
         headerShown:false,
@@ -24,27 +23,36 @@ const TabNavigator = () => {
         tabBarInactiveBackgroundColor: COLORS.white,
         tabBarLabelStyle: {
           fontSize: 12,
+          marginTop: -5,
           marginBottom: 5,
           fontFamily: 'Poppins-Regular',
         },
         tabBarStyle: {
           height: 60,
         },
+        tabBarIcon: ({ focused }) => {
+          let iconName = "";
+
+          if (route.name === 'History') {
+            iconName = focused ? 'time' : 'time-outline';
+          } else if (route.name === 'Scan') {
+            iconName = focused ? 'scan' : 'scan-outline';
+          } else if (route.name === 'Settings') {
+            iconName = focused ? 'settings' : 'settings-outline';
+          }
+
+          // You can return any component that you like here!
+          return <Icon name={iconName} size={24} color={focused ? COLORS.shrunkgreen : COLORS.black} />;
+        },
       })}>
 
-      <Tab.Screen name="History" component={History} />
+      <Tab.Screen name="History" component={History} options={{
+      }}/>
       <Tab.Screen name="Scan" component={Scan} options={{
         headerShown: false,
-        tabBarIcon: () => {
-          return (
-            <View style={{alignItems: "center", justifyContent: "center"}}>
-              <Icon name="scan" size={24} color={COLORS.black} />
-            </View>
-
-          )
-        }
       }}/>
-      <Tab.Screen name="Settings" component={Settings} />
+      <Tab.Screen name="Settings" component={Settings} options={{
+      }}/>
     </Tab.Navigator>
   );
 };

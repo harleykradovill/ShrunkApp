@@ -1,10 +1,20 @@
 import { Text, TouchableOpacity, StyleSheet, View, Image } from 'react-native';
 import React from 'react';
 import COLORS from '../constants/colors';
-import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Button2 = (props) => {
     const textColor = props.filled ? COLORS.black : COLORS.black;
+
+    let iconName = "chevron-forward";
+
+    if (props.title === "Delete App Data") {
+      iconName = "trash";
+    } else if (props.title === "Terms of Service") {
+      iconName = "";
+    } else if (props.title === "Privacy Policy") {
+      iconName = "";
+    }
 
     return (
       <TouchableOpacity
@@ -24,7 +34,7 @@ const Button2 = (props) => {
             <Text style={{ fontSize: 16, fontFamily: 'Poppins-Regular', ... { color: textColor } }}>{props.title}</Text>
           </View>
           <View>
-            <Ionicons name="chevron-forward" size={24} color="black" />
+            {iconName !== "" && <Icon name={iconName} size={18} color={COLORS.black} />}
           </View>
         </View>
       </TouchableOpacity>
