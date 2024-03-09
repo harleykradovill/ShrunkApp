@@ -6,6 +6,17 @@
       "eas": {
         "projectId": "4eb6ea50-c09f-4d70-bb6c-727cb5136993"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-font"
+    ]
   }
 }
