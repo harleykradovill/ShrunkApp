@@ -7,9 +7,11 @@ const Button2 = (props) => {
     const textColor = props.filled ? COLORS.black : COLORS.black;
 
     let iconName = "chevron-forward";
+    let iconColor = COLORS.shrunkgreen;
 
     if (props.title === "Delete App Data") {
       iconName = "trash";
+      iconColor = COLORS.error;
     } else if (props.title === "Terms of Service") {
       iconName = "";
     } else if (props.title === "Privacy Policy") {
@@ -34,7 +36,7 @@ const Button2 = (props) => {
             <Text style={{ fontSize: 16, fontFamily: 'Poppins-Regular', ... { color: textColor } }}>{props.title}</Text>
           </View>
           <View>
-            {iconName !== "" && <Icon name={iconName} size={18} color={COLORS.shrunkgreen} />}
+            {iconName !== "" && <Icon name={iconName} size={18} color={iconColor} />}
           </View>
         </View>
       </TouchableOpacity>

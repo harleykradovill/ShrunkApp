@@ -21,7 +21,7 @@ const Settings = () => {
         }}>
 
         <Text style={{
-          fontSize: 20,
+          fontSize: 22,
           textAlign: 'left',
           color: COLORS.shrunkgreen,
           fontFamily: 'Poppins-Bold',
@@ -41,6 +41,15 @@ const Settings = () => {
 
         <Button2
           title="About Shrunk"
+          style={{
+            marginBottom: 5,
+            paddingVertical: 12,
+            paddingHorizontal: 25,
+          }}
+        />
+
+        <Button2
+          title="Help and Feedback"
           style={{
             marginBottom: 5,
             paddingVertical: 12,

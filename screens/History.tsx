@@ -11,7 +11,7 @@ const History = () => {
       backgroundColor: COLORS.white,
     }}>
       <Text style={{
-        fontSize: 20,
+        fontSize: 22,
         textAlign: 'left',
         marginTop: 20,
         marginLeft: 20,
