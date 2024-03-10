@@ -11,7 +11,7 @@ const Scan = () => {
      alignItems: 'center',
      backgroundColor: COLORS.black,
    }}>
-     <Icon name='scan-outline' size={90} color={COLORS.white} />
+     <Icon name='scan-outline' size={95} color={COLORS.white} />
    </View>
   );
 };
