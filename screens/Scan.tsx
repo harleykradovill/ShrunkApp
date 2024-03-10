@@ -1,6 +1,7 @@
 import { View, Button, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import COLORS from "../constants/colors";
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Scan = () => {
   return (
@@ -9,7 +10,9 @@ const Scan = () => {
      justifyContent: 'center',
      alignItems: 'center',
      backgroundColor: COLORS.black,
-   }} />
+   }}>
+     <Icon name='scan-outline' size={90} color={COLORS.white} />
+   </View>
   );
 };
 export default Scan;

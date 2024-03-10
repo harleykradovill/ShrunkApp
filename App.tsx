@@ -23,12 +23,12 @@ const TabNavigator = () => {
         tabBarInactiveBackgroundColor: COLORS.white,
         tabBarLabelStyle: {
           fontSize: 12,
-          marginTop: -5,
-          marginBottom: 5,
+          marginTop: -8,
+          marginBottom: 8,
           fontFamily: 'Poppins-Regular',
         },
         tabBarStyle: {
-          height: '8%',
+          height: '9%',
         },
         tabBarIcon: ({ focused }) => {
           let iconName = "";

@@ -25,7 +25,7 @@ const Button2 = (props) => {
             paddingLeft: 0,
             paddingRight: 0,
             borderBottomWidth: 1,
-            borderBottomColor: COLORS.cgray,
+            borderBottomColor: '#dddddd',
         }}
         onPress={props.onPress}
       >
@@ -34,7 +34,7 @@ const Button2 = (props) => {
             <Text style={{ fontSize: 16, fontFamily: 'Poppins-Regular', ... { color: textColor } }}>{props.title}</Text>
           </View>
           <View>
-            {iconName !== "" && <Icon name={iconName} size={18} color={COLORS.black} />}
+            {iconName !== "" && <Icon name={iconName} size={18} color={COLORS.shrunkgreen} />}
           </View>
         </View>
       </TouchableOpacity>
@@ -44,7 +44,7 @@ const Button2 = (props) => {
 const styles = StyleSheet.create({
     button: {
         paddingBottom: 16,
-        paddingVertical: 10,
+        paddingTop: 16,
         color: COLORS.blue,
         borderRadius: 0,
         width: '100%',
