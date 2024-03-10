@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {Welcome, Scan, History, Settings} from './screens';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import COLORS from './constants/colors';
+import 'react-native-gesture-handler';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();

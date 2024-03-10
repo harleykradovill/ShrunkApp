@@ -1,9 +1,15 @@
 import {View, Text} from 'react-native';
-import React from 'react';
+import React, { useMemo } from 'react';
 import COLORS from '../constants/colors';
 import Button2 from '../components/settingspagebutton';
+import { createStackNavigator } from '@react-navigation/stack';
 
-const Settings = () => {
+import {DeleteScanData} from '../screens';
+
+const Stack = createStackNavigator();
+
+const SettingsPage = ({ navigation }) => {
+
   return (
     <View style={{
       flex: 1,
@@ -77,6 +83,7 @@ const Settings = () => {
 
         <Button2
           title="Delete App Data"
+          onPress={() => navigation.navigate('Delete App Data')}
           style={{
             marginBottom: 5,
             paddingVertical: 12,
@@ -114,4 +121,27 @@ const Settings = () => {
     </View>
   );
 };
-export default Settings;
+
+export default function Settings() {
+  return (
+     <Stack.Navigator initialRouteName="SettingsPage">
+       <Stack.Screen
+         name="SettingsPage"
+         component={SettingsPage}
+         options={{headerShown: false}}
+       />
+       <Stack.Screen
+         name="Delete App Data"
+         component={DeleteScanData}
+         options={{
+           headerShown: true,
+           headerTitleStyle: {
+             fontFamily: 'Poppins-Regular',
+             fontSize: 18,
+             marginTop: 5,
+           },
+       }}
+       />
+     </Stack.Navigator>
+  );
+}
