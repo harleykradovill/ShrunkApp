@@ -99,7 +99,7 @@ const Settings = () => {
           fontFamily: 'Poppins-Regular',
           marginBottom: -3,
         }}>
-          Using Native React
+          Using React Native
         </Text>
       </View>
     </View>
